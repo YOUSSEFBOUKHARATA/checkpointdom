@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom checkpoint</title>
+    <script src="https://kit.fontawesome.com/92101591b1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+<script src="dom.js" async></script>
+<link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <section id="title">
+        <h1>Shopping Cart</h1>
+
+    </section>
+<section id="container">
+    <div class="allitems">
+        <div class="itemcard">
+            <div class="item">
+                <img src="img/pc1.jpg" alt="pc">
+                <p class="product-name">PC PORTABLE HP PAVILION GAMING 15-DK1010NK</p>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="price">
+                <p>Price:<span class="prixunitaire">2579</span>dt</p> 
+                <!-- prix unitaire -->
+                <div class="product-quantity">
+                    <input class="quantity-btn" type="number" name="quantity" value="1" min="1">
+        
+                  </div>
+                           
+            </div>
+            <!-- item wahed bark edha kol -->
+        </div>
+
+        <div class="itemcard">
+            <div class="item">
+                <img src="./Assets/pc2.jpg" alt="pc">
+                <p class="product-name">PC PORTABLE MSI GAMING GF63 THIN 10SC-666XF</p>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="price">
+                <p>Price:<span class="prixunitaire">3258</span>dt</p> 
+                <!-- prix unitaire -->
+                <div class="product-quantity">
+                    <input class="quantity-btn" type="number" name="quantity" value="1" min="1">
+                    
+                  </div>
+                        
+            </div>
+        </div>
+
+        <div class="itemcard">
+            <div class="item">
+                <img src="./Assets/pc3.jpg" alt="pc">
+                <p class="product-name">PC PORTABLE MSI GL75-10SER LEOPARD GL75-<br>281XFR-24</p>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="price">
+                <p>Price:<span class="prixunitaire">4114</span>dt</p> 
+                <!-- prix unitaire -->
+                <div class="product-quantity">
+                    <input class="quantity-btn" type="number" name="quantity" value="1" min="1">
+                    
+                  </div>
+                          
+            </div> 
+        </div>
+        <div class="itemcard">
+            <div class="item">
+                <img src="./Assets/mecnical keyboard.jpg" alt="keyboard">
+                <p class="product-name">Mecanical Keyboard RGB SPIRIT OF GAMER XPERT-<br>K500</p>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="price">
+                <p>Price:<span class="prixunitaire">119</span>dt</p> 
+                <!-- prix unitaire -->
+                <div class="product-quantity">
+                    <input class="quantity-btn" type="number" name="quantity" value="1" min="1">
+                    
+                  </div>
+                          
+            </div> 
+        </div>
+        <div class="itemcard">
+            <div class="item">
+                <img src="./Assets/Mouse.jpg" alt="Mouse">
+                <p class="product-name">SOURIS GAMING GLORIOUS MODEL D / NOIR MAT<br>GD-BLACK</p>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="price">
+                <p>Price:<span class="prixunitaire">159</span>dt</p> 
+                <!-- prix unitaire -->
+                <div class="product-quantity">
+                    <input class="quantity-btn" type="number" name="quantity" value="1" min="1">
+                    
+                  </div>
+                          
+            </div> 
+        </div>
+    </div>
+    <div id="summary">
+    <h3>Summary</h3>
+    <p>Total: <span class="summarytotal">10229</span>dt</p>
+    <button class="btnpurchase" onclick="btnpurchaseclicked()">PURCHASE</button>
+
+    </div>
+</section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
